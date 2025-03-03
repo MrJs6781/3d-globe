@@ -2,7 +2,7 @@
 
 Welcome to **3D Globe**—a sleek, interactive 3D globe visualization built with Next.js, TypeScript, and globe.gl. This project brings a minimal yet engaging globe experience, styled with TailwindCSS and ready for future enhancements.
 
-![3D Globe Preview](https://github.com/MrJs6781/3d-globe/raw/main/screenshots/globe-preview.png)
+![3D Globe Preview](https://raw.githubusercontent.com/MrJs6781/3d-globe/refs/heads/master/screenshots/globe-preview.png)
 
 ## 🚀 Live Demo
 
