@@ -2,7 +2,7 @@
 
 Welcome to **3D Globe**—a sleek, interactive 3D globe visualization built with Next.js, TypeScript, and globe.gl. This project brings a minimal yet engaging globe experience, styled with TailwindCSS and ready for future enhancements.
 
-![3D Globe Preview](https://github.com/your-username/3d-globe/raw/main/screenshots/globe-preview.png)
+![3D Globe Preview](https://github.com/MrJs6781/3d-globe/raw/main/screenshots/globe-preview.png)
 
 ## 🚀 Live Demo
 
@@ -27,6 +27,6 @@ Check it out live: [https://3d-globe-three.vercel.app/](https://3d-globe-three.v
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/3d-globe.git
+   git clone https://github.com/MrJs6781/3d-globe.git
    cd 3d-globe
    ```
