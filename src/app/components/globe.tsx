@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useRef } from "react";
-import Globe from "globe.gl";
+import Globe, { GlobeInstance } from "globe.gl";
 import * as d3 from "d3";
 import * as GeoJSON from "geojson";
 import { cn } from "@/lib/utils";
@@ -17,7 +17,7 @@ type CountryFeature = GeoJSON.Feature<GeoJSON.Geometry, CountryProperties>;
 
 export default function GlobeComponent() {
   const globeRef = useRef<HTMLDivElement>(null);
-  const globeInstance = useRef<any>(null); // برای ذخیره نمونه Globe
+  const globeInstance = useRef<GlobeInstance | null>(null); // برای ذخیره نمونه Globe
 
   useEffect(() => {
     if (typeof window === "undefined") return;
