@@ -59,18 +59,18 @@ export default function GlobeComponent() {
             .polygonCapColor(() => "#F4F4F4")
             .polygonSideColor(() => "#0085D426")
             .polygonStrokeColor(() => "#C2C2C2")
-            // .polygonLabel((data: object) => {
-            //   const country = data as CountryFeature;
-            //   const properties = country.properties;
-            //   if (!properties) return "";
-            //   const countryFlagUrl = `https://GlobalArtInc.github.io/round-flags/flags/${properties.ISO_A2.toLowerCase()}.svg`;
-            //   return `
-            //     <span className="flex items-center justify-start" style="display:flex;align-items:center;gap:8px;background-color : rgb(37, 150, 190); padding : 8px; margin : 0;">
-            //       <img src="${countryFlagUrl}" alt="Flag of ${properties.ADMIN}" style="width: 35px; height: 35px; margin-bottom: 2px; border-radius:50%;" />
-            //       <p style="color:black;font-size:15px;font-weight:600;color:white">${properties.ADMIN} (${properties.ISO_A2})</p>
-            //     </span>
-            //   `;
-            // })
+            .polygonLabel((data: object) => {
+              const country = data as CountryFeature;
+              const properties = country.properties;
+              if (!properties) return "";
+              const countryFlagUrl = `https://GlobalArtInc.github.io/round-flags/flags/${properties.ISO_A2.toLowerCase()}.svg`;
+              return `
+                <span className="flex items-center justify-start" style="display:flex;align-items:center;gap:8px;background-color : rgb(37, 150, 190); padding : 8px; margin : 0;">
+                  <img src="${countryFlagUrl}" alt="Flag of ${properties.ADMIN}" style="width: 35px; height: 35px; margin-bottom: 2px; border-radius:50%;" />
+                  <p style="color:black;font-size:15px;font-weight:600;color:white">${properties.ADMIN} (${properties.ISO_A2})</p>
+                </span>
+              `;
+            })
             .onPolygonHover((hoverD: object | null) => {
               const countryHover = hoverD as CountryFeature | null;
               world
@@ -93,19 +93,19 @@ export default function GlobeComponent() {
             .polygonsTransitionDuration(300);
 
           // تنظیمات کنترل‌ها برای چرخش خودکار
-          // const controls = world.controls();
-          // controls.autoRotate = true; // فعال کردن چرخش خودکار
-          // controls.autoRotateSpeed = 0.75; // سرعت چرخش کم (می‌تونی این مقدار رو تنظیم کنی)
+          const controls = world.controls();
+          controls.autoRotate = true; // فعال کردن چرخش خودکار
+          controls.autoRotateSpeed = 0.75; // سرعت چرخش کم (می‌تونی این مقدار رو تنظیم کنی)
 
-          // // توقف چرخش هنگام هاور
-          // currentRef.addEventListener("mouseenter", () => {
-          //   controls.autoRotate = false;
-          // });
+          // توقف چرخش هنگام هاور
+          currentRef.addEventListener("mouseenter", () => {
+            controls.autoRotate = false;
+          });
 
-          // // ادامه چرخش بعد از خروج ماوس
-          // currentRef.addEventListener("mouseleave", () => {
-          //   controls.autoRotate = true;
-          // });
+          // ادامه چرخش بعد از خروج ماوس
+          currentRef.addEventListener("mouseleave", () => {
+            controls.autoRotate = true;
+          });
         }
       );
 

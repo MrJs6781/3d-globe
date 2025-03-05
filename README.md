@@ -10,14 +10,16 @@ Check it out live: [https://3d-globe-three.vercel.app/](https://3d-globe-three.v
 
 ## ✨ Features
 
-- **Interactive Globe**: Hover over countries to see them elevate and change color (white to #0085D4).
-- **Smooth Transitions**: Polygons animate with a 300ms transition duration.
-- **Click Events**: Click a country to log its name and ISO code in the console—perfect for adding more interactivity later.
-- **Fixed Size**: Rendered at 600x600px for a clean, centered look.
+- **Interactive Globe**: Hover over countries to see them elevate (0.06 to 0.12) and change color (white to #0085D4).
+- **Tooltips**: Hover to view country names, ISO codes, and flags in a stylish cyan tooltip.
+- **Auto-Rotation**: Spins at 0.75 speed, pausing on hover and resuming when you leave.
+- **Click Events**: Click a country to log its name and ISO code—more interactivity to come!
+- **Fixed Size**: Rendered at 600x600px for a clean, centered display.
+- **Smooth Transitions**: Polygons animate with a 300ms duration.
 
 ## 🛠 Tech Stack
 
-- **Next.js 15**: Server-side rendering and fast development.
+- **Next.js 15**: Client-side rendering for this interactive component.
 - **TypeScript**: Type-safe code for better maintainability.
 - **globe.gl**: Lightweight 3D globe rendering.
 - **TailwindCSS**: Utility-first CSS for rapid styling.
